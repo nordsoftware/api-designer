@@ -122,7 +122,7 @@ Some last words, please do not get discouraged if submitting a small fix, requir
 
 ### Merge approval
 
-The api-designer maintainers will review your pull request and, if approved, will merge into the main repo. Commits get approval based on the conventions outlined in the previous section.
+The api-designer maintainers will review your pull request and, if approved, will merge into the main repo. Commits get approval based on the conventions outlined in the previous section. For example, new features without additional tests will be not approved.
 
 ### How can I become a maintainer?
 
