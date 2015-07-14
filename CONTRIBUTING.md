@@ -116,11 +116,13 @@ Commits that change or fix bugs on any UI related sources must be accompanied by
 
 Commits that introduce new features must be accompanied by a short `.gif` with a demo of the feature in action. If possible, the demo must include error handling and all possible scenarios.
 
+Seriously consider adding tests to any commits, good tests can be very descriptive of the problem you are solving and they greatly improve the development experience for other developers. Obviously, changes to the README or other descriptive files do not need any tests.
+
 Some last words, please do not get discouraged if submitting a small fix, requires you to work in a larger refactor than you were expecting. Sometimes the best fix is not a quick and dirty one, but requires a shift in how the application looks at the model.
 
 ### Merge approval
 
-The api-designer maintainers will review your pull request and, if approved, will merge into the main repo.
+The api-designer maintainers will review your pull request and, if approved, will merge into the main repo. Commits get approval based on the conventions outlined in the previous section.
 
 ### How can I become a maintainer?
 
