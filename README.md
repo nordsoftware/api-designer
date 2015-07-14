@@ -8,6 +8,16 @@
 
 **API Designer** is a standalone/embeddable editor for [RAML](http://raml.org) (RESTful API Modeling Language) written in JavaScript using Angular.JS. By default, the editor uses an in-browser filesystem stored in HTML5 Localstorage.
 
+## Running Locally
+
+```
+npm install -g api-designer
+
+api-designer
+```
+
+This will start a local designer instance using the in-browser filesystem.
+
 ## Embedding
 
 The following example details how to embed the API Designer:
@@ -29,7 +39,7 @@ The following example details how to embed the API Designer:
       // This part is needed only if you want to provide your own Persistance Implementation
       // Angular Module must match "ramlEditorApp"
       angular.module('ramlEditorApp')
-      .factory('MyFileSystem', function ($q, config, eventService) {
+      .factory('MyFileSystem', function ($q, config, $rootScope) {
         var service = {};
 
         service.directory = function (path) {
@@ -74,7 +84,7 @@ The following example details how to embed the API Designer:
 
         return service;
       })
-      .run(function (MyFileSystem, config, eventService) {
+      .run(function (MyFileSystem, config, $rootScope) {
         // Set MyFileSystem as the filesystem to use
         config.set('fsFactory', 'MyFileSystem');
         
@@ -83,7 +93,7 @@ The following example details how to embed the API Designer:
         // The expires flags means whether
         // it should be hidden after a period of time or the
         // user should dismiss it manually.
-        eventService.broadcast('event:notification',
+        $rootScope.$broadcast('event:notification',
           {message: 'File saved.', expires: true});
 
       });
