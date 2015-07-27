@@ -140,7 +140,8 @@
       var hasFsFactory = fsFactory && $injector.has(fsFactory);
 
       if (!hasFsFactory) {
-        config.set('fsFactory', (fsFactory = 'localStorageFileSystem'));
+        //config.set('fsFactory', (fsFactory = 'localStorageFileSystem'));
+        config.set('fsFactory', (fsFactory = 'diskFileSystem'));
       }
 
       return $injector.get(fsFactory);
